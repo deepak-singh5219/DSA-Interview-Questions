@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 vector<vector<int>> fourSum(vector<int>& nums, int target) {
         int n = nums.size();
         sort(nums.begin(),nums.end());
@@ -30,3 +33,29 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
         }
         return ans;
     }
+
+    int main()
+{
+    int n;
+    cout<<"Enter array size: \n";
+    cin>>n;
+    cout<<"Enter array elements: \n";
+    vector<int>arr(n,0);
+    for(int i=0;i<n;i++)
+    cin>>arr[i];
+    
+    int target = 0;
+    cout<<"Enter the target: \n";
+    cin>>target;
+    vector<vector<int>>ans = fourSum(arr,target);
+    cout<<"Output is: \n";
+    for(auto quad:ans)
+    {
+        for(auto i:quad)
+        {
+            cout<<i<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
