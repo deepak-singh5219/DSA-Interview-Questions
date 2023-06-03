@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 vector<vector<int>> findDifference(vector<int>& nums1, vector<int>& nums2) {
         
       unordered_map<int,int> mp;
@@ -32,3 +35,28 @@ vector<vector<int>> findDifference(vector<int>& nums1, vector<int>& nums2) {
         return ans;
         
     }
+
+        int main()
+{
+    int n;
+    cout<<"Enter array size: \n";
+    cin>>n;
+    cout<<"Enter array elements: \n";
+    vector<int>arr1(n,0);
+    vector<int>arr2(n,0);
+    
+    for(int i=0;i<n;i++)
+    cin>>arr1[i];
+    for(int i=0;i<n;i++)
+    cin>>arr2[i];
+    
+    vector<vector<int>>  ans = findDifference(arr1,arr2,arr3);
+    cout<<"Output is: \n";
+    for(auto i:ans)
+    {
+        for(auto j:i)
+        cout<<j<<" ";
+        cout<<endl;
+    }
+    return 0;
+}
